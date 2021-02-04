@@ -56,6 +56,15 @@ li {
   border-radius: 2px;
 }
 
+.line-center {
+  height: 3px;
+  width: 30px;
+  margin-top: .5rem;
+  background: #49B575;
+  border-radius: 2px;
+  margin: auto;
+}
+
 header:before {
   content: '';
   position: absolute;
@@ -214,6 +223,49 @@ header nav .navbar-nav .nav-item .nav-link {
 
 .content-section .project-details .project-history p {
   margin: 15px;
+}
+
+.services {
+  background: rgba(192, 227, 231, 0.2);
+}
+
+.services .service-container {
+  border: 2px solid rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+}
+
+.services .service-container .img-container {
+  width: 240px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.services .service-container h1 {
+  padding-top: 20px;
+}
+
+.services .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services .skills .skill-list {
+  padding: 0 0 10px 30px;
+}
+
+.services .skills .skill-list i {
+  color: #49B575;
+  font-size: 18px;
+}
+
+.services .skills .skill-list span {
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {

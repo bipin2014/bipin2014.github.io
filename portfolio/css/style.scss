@@ -49,6 +49,14 @@ li{
     background: $secondaryColor;
     border-radius:2px;
 }
+.line-center{
+    height:3px;
+    width:30px;
+    margin-top:.5rem;
+    background: $secondaryColor;
+    border-radius:2px;
+    margin:auto;
+}
 
 
 //header section
@@ -184,6 +192,38 @@ header{
             }
             p{
                 margin:15px;
+            }
+        }
+    }
+}
+
+//services section
+.services{
+    background: $background;
+    .service-container{
+        border:2px solid rgba(128,128,128,0.5);
+        border-radius:10px;
+        .img-container{
+            width:240px;
+            height: 150px;
+            margin:0 auto;
+            margin-top:50px;
+        }
+        h1{
+            padding-top:20px;
+        }
+    }
+    .skills{
+        display:flex;
+        flex-direction: column;
+        .skill-list{
+            padding:0 0 10px 30px;
+            i{
+                color:$secondaryColor;
+                font-size:18px;
+            }
+            span{
+                margin-left:10px;
             }
         }
     }
