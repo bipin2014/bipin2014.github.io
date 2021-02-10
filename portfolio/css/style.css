@@ -273,6 +273,97 @@ header nav .navbar-nav .nav-item .nav-link {
   margin-left: 10px;
 }
 
+.experience-section {
+  position: relative;
+}
+
+.experience-section:before {
+  content: '';
+  position: absolute;
+  height: 393px;
+  width: 393px;
+  background-color: #C0E3E7;
+  border-radius: 15px;
+  left: 1159px;
+  top: -70px;
+  z-index: -1;
+  -webkit-transform: rotate(-35.49deg);
+          transform: rotate(-35.49deg);
+}
+
+.experience-section .heading-experience {
+  padding-bottom: 10px;
+}
+
+.experience-section .experience-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.experience-section .experience-wrapper .img-container {
+  min-height: 50px;
+  min-width: 50px;
+}
+
+.experience-section .experience-wrapper .img-container img {
+  height: 50px;
+  width: 50px;
+}
+
+.experience-section .experience-wrapper .work-experience {
+  margin-left: 10px;
+}
+
+.experience-section .experience-wrapper .work-experience .experience-title .date {
+  color: #808080;
+}
+
+.experience-section .experience-wrapper .work-experience .experience-title span {
+  color: #49B575;
+  font-weight: 500;
+}
+
+.experience-section .cover-img-wrapper {
+  position: relative;
+}
+
+.experience-section .cover-img-wrapper .img-centered img {
+  height: 310px;
+  width: 475px;
+  display: block;
+  margin: 50px auto;
+}
+
+.experience-section .cover-img-wrapper .img-floating-left img {
+  position: absolute;
+}
+
+.experience-section .cover-img-wrapper .img-floating-left .img-top-left {
+  top: -20px;
+  left: 150px;
+}
+
+.experience-section .cover-img-wrapper .img-floating-left .img-bottom-left {
+  bottom: 30px;
+}
+
+.experience-section .cover-img-wrapper .img-floating-right img {
+  position: absolute;
+  height: 150px;
+  width: 500px;
+}
+
+.experience-section .cover-img-wrapper .img-floating-right .img-top-right {
+  top: -50px;
+  right: 10px;
+}
+
+.experience-section .cover-img-wrapper .img-floating-right .img-bottom-right {
+  bottom: 30px;
+  right: 0;
+}
+
 @media (max-width: 768px) {
   .mycontainer {
     margin: 0 10px;

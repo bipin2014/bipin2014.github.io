@@ -1,8 +1,10 @@
 
-@mixin bg-design{
+@mixin bg-design{  
+    content:'';
+    position: absolute;
     height:393px;
     width:393px;
     background-color:$primaryColor;
     border-radius:15px;
-    transform: rotate(45deg);
+    
 }

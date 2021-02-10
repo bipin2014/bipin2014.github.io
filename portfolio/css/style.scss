@@ -67,9 +67,8 @@ li{
 
 header{
         &:before{
-            content:'';
-            position: absolute;
             @include bg-design;
+            transform: rotate(45deg);
             right:-100px;
             top:-130px;
         }
@@ -228,6 +227,84 @@ header{
             }
             span{
                 margin-left:10px;
+            }
+        }
+    }
+}
+
+// Experience section 
+.experience-section{
+    position: relative;
+    &:before{
+        @include bg-design;
+        left: 1159px;
+        top:-70px;
+        z-index: -1;
+        transform: rotate(-35.49deg);
+    }
+    .heading-experience{
+        padding-bottom:10px;
+    }
+    .experience-wrapper{
+        display: flex;   
+        .img-container{
+            min-height:50px;
+            min-width:50px;
+            img{
+                height:50px;
+                width:50px;
+            }
+        }
+        .work-experience{
+            margin-left:10px;
+            .experience-title{
+                .date{
+                    color:#808080;
+                }
+                span{
+                    color:$secondaryColor;
+                    font-weight:500;
+                }
+            }
+            
+        }
+
+    }
+    .cover-img-wrapper{  
+        position:relative;
+        .img-centered{
+            img{
+                height:310px;
+                width:475px;
+                display: block;
+                margin:50px auto;
+            }
+        }
+        .img-floating-left{
+            img{
+                position:absolute;
+            }
+            .img-top-left{
+                top:-20px;
+                left:150px;
+            }
+            .img-bottom-left{
+                bottom:30px;
+            }
+        }
+        .img-floating-right{
+            img{
+                position:absolute;
+                height:150px;
+                width:500px;
+            }
+            .img-top-right{
+                top:-50px;
+                right:10px;
+            }
+            .img-bottom-right{
+                bottom:30px;
+                right:0;
             }
         }
     }
