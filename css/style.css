@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+input::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
 .mycontainer {
   margin: 0 100px;
 }
@@ -25,6 +29,10 @@ body {
   overflow: hidden;
 }
 
+.gutter-bot-md {
+  margin-bottom: 30px;
+}
+
 .btn {
   padding: 12px 30px;
   background: #49B575;
@@ -33,18 +41,23 @@ body {
   font-weight: 700;
 }
 
-h1 {
+a:hover {
+  text-decoration: none;
+  color: #C0E3E7;
+}
+
+.heading-lg {
   font-weight: 400;
   font-size: 24px;
 }
 
-h2 {
+.heading-md {
   font-weight: 500;
   font-size: 20px;
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 30px;
 }
@@ -109,7 +122,7 @@ header nav .navbar-nav .nav-item .nav-link {
 
 .content-section .profile {
   background: #C0E3E7;
-  height: 100%;
+  max-height: 750px;
   width: 100%;
   padding: 50px 0;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
@@ -124,14 +137,10 @@ header nav .navbar-nav .nav-item .nav-link {
 }
 
 .content-section .profile .img-container img {
-  height: 210px;
-  width: 210px;
+  max-height: 210px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.content-section .profile h1 {
-  padding-top: 40px;
 }
 
 .content-section .profile p {
@@ -147,10 +156,6 @@ header nav .navbar-nav .nav-item .nav-link {
   font-size: 30px;
   font-weight: 500;
   padding-bottom: 30px;
-}
-
-.content-section .contents .text-container h1 {
-  padding-bottom: 15px;
 }
 
 .content-section .contents .social-media {
@@ -191,10 +196,12 @@ header nav .navbar-nav .nav-item .nav-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
 }
 
 .content-section .info .info-list li {
-  margin-right: 40px;
   padding-right: 40px;
 }
 
@@ -208,7 +215,6 @@ header nav .navbar-nav .nav-item .nav-link {
 }
 
 .content-section .project-details {
-  margin-left: 50px;
   margin-top: -33%;
   border: 1px solid #c4c4c4;
   background: white;
@@ -241,7 +247,7 @@ header nav .navbar-nav .nav-item .nav-link {
 }
 
 .services .service-container {
-  border: 2px solid rgba(128, 128, 128, 0.5);
+  border: 2px solid rgba(128, 128, 128, 0.2);
   border-radius: 10px;
 }
 
@@ -250,10 +256,6 @@ header nav .navbar-nav .nav-item .nav-link {
   height: 150px;
   margin: 0 auto;
   margin-top: 50px;
-}
-
-.services .service-container h1 {
-  padding-top: 20px;
 }
 
 .services .skills {
@@ -334,8 +336,8 @@ header nav .navbar-nav .nav-item .nav-link {
 }
 
 .experience-section .cover-img-wrapper .img-centered img {
-  height: 310px;
-  width: 475px;
+  max-height: 310px;
+  max-width: 475px;
   display: block;
   margin: 50px auto;
 }
@@ -392,8 +394,8 @@ header nav .navbar-nav .nav-item .nav-link {
 }
 
 .project-section .project-img .img-container {
-  height: 400px;
-  border: 6px solid #C0E3E7;
+  height: 350px;
+  border: 5px solid #C0E3E7;
   border-radius: 15px;
 }
 
@@ -413,20 +415,39 @@ header nav .navbar-nav .nav-item .nav-link {
   margin-bottom: 30px;
 }
 
+.footer-section {
+  background: rgba(192, 227, 231, 0.2);
+}
+
 .footer-section .review-section .client-img {
   position: relative;
 }
 
 .footer-section .review-section .client-img .quote {
-  position: absolute;
-  bottom: 0;
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
+  border-radius: 5px;
   background: #C0E3E7;
+  position: absolute;
+  bottom: -20px;
+  right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-section .review-section .client-img .quote i {
+  font-size: 30px;
 }
 
 .footer-section .review-section .img-container {
-  height: 400px;
+  height: 320px;
   border-radius: 15px;
   position: relative;
 }
@@ -438,54 +459,108 @@ header nav .navbar-nav .nav-item .nav-link {
      object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .mycontainer {
-    margin: 0 10px;
+.footer-section .review-overview {
+  margin-top: 20px;
+}
+
+.footer-section .quote-text {
+  quotes: "" " " "";
+  color: #49B575;
+  font-weight: 500;
+}
+
+.footer-section .contact-form .form-group label {
+  font-weight: 500;
+}
+
+.footer-section .contact-form .form-group input, .footer-section .contact-form .form-group textarea {
+  background: #C0E3E7;
+  border: none;
+}
+
+.footer-section .contact-form .form-group input {
+  height: 40px;
+}
+
+.footer-section .copyright {
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.footer-section .copyright .cp-text {
+  font-size: 14px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: pink;
+}
+
+@media (max-width: 991px) {
+  header nav .navbar-nav .nav-item {
+    padding: 0;
   }
-  .pad-top {
-    padding-top: 20px;
-  }
-  .pad-bot {
-    padding-bottom: 20px;
-  }
-  header:before {
+  header:before, .project-section:before, .experience-section:before {
     display: none;
   }
-  header nav .navbar-nav .nav-item {
-    padding: 5px 0;
-  }
-  header nav .navbar-nav .nav-link {
-    padding: 5px 0;
+  .content-section .project-details {
     margin: 0;
   }
-  .content-section .info .info-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .content-section .info .info-list li {
+    padding-top: 10px;
+  }
+  .ord-1 {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .experience-section .cover-img-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .mycontainer {
+    margin: 0 30px;
+  }
+  .al-center {
+    text-align: center;
+  }
+  .pad-top {
+    padding-top: 40px;
+  }
+  .pad-bot {
+    padding-bottom: 40px;
+  }
+  .content-section hr {
+    margin-top: 30px;
+  }
+  .content-section .contents {
+    padding: 15px;
   }
   .content-section .info .info-list li {
-    margin-right: 20px;
-    padding-right: 20px;
+    padding-top: 10px;
   }
-  .content-section .info .info-list li i {
-    color: #49B575;
-    font-size: 18px;
+  .services .service-container {
+    margin-top: 15px;
   }
-  .content-section .info .info-list li span {
-    padding-left: 10px;
+  .experience-wrapper {
+    margin-top: 15px;
   }
-  .content-section .project-details {
-    margin-left: 0;
-    margin-top: 20px;
-    border: none;
+  .experience-section .experience-wrapper .work-experience .experience-title .date {
+    float: none !important;
   }
-  .content-section .project-details .project-history .big-number {
-    padding-left: 0px;
-    font-size: 60px;
-    color: #C0E3E7;
-    line-height: 80px;
+  .contact-section {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .services .skills {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 /*# sourceMappingURL=style.css.map */
